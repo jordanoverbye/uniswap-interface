@@ -1,5 +1,6 @@
 import { createWeb3ReactRoot, Web3ReactProvider } from '@web3-react/core'
 import 'inter-ui'
+import { Helmet } from 'react-helmet'
 import React, { StrictMode } from 'react'
 import { isMobile } from 'react-device-detect'
 import ReactDOM from 'react-dom'
@@ -58,6 +59,7 @@ function Updaters() {
 ReactDOM.render(
   <StrictMode>
     <FixedGlobalStyle />
+    <Helmet titleTemplate="%s - Uniswap Interface" />
     <Web3ReactProvider getLibrary={getLibrary}>
       <Web3ProviderNetwork getLibrary={getLibrary}>
         <Blocklist>

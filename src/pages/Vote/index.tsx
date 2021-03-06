@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
 import { TYPE, ExternalLink } from '../../theme'
@@ -124,6 +125,9 @@ export default function Vote() {
 
   return (
     <PageWrapper gap="lg" justify="center">
+      <Helmet>
+        <title>Vote</title>
+      </Helmet>
       <DelegateModal
         isOpen={showDelegateModal}
         onDismiss={toggleDelegateModal}

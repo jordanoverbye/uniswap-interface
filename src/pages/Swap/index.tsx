@@ -1,5 +1,6 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@uniswap/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { ArrowDown } from 'react-feather'
 import ReactGA from 'react-ga'
 import { Text } from 'rebass'
@@ -293,6 +294,9 @@ export default function Swap() {
 
   return (
     <>
+      <Helmet>
+        <title>Swap</title>
+      </Helmet>
       <TokenWarningModal
         isOpen={importTokensNotInDefault.length > 0 && !dismissTokenWarning}
         tokens={importTokensNotInDefault}

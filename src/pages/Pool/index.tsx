@@ -1,4 +1,5 @@
 import React, { useContext, useMemo } from 'react'
+import { Helmet } from 'react-helmet'
 import styled, { ThemeContext } from 'styled-components'
 import { Pair, JSBI } from '@uniswap/sdk'
 import { Link } from 'react-router-dom'
@@ -125,6 +126,9 @@ export default function Pool() {
 
   return (
     <>
+      <Helmet>
+        <title>Pool</title>
+      </Helmet>
       <PageWrapper>
         <SwapPoolTabs active={'pool'} />
         <VoteCard>

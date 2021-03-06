@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
 import { STAKING_REWARDS_INFO, useStakingInfo } from '../../state/stake/hooks'
@@ -55,6 +56,9 @@ export default function Earn() {
 
   return (
     <PageWrapper gap="lg" justify="center">
+      <Helmet>
+        <title>UNI</title>
+      </Helmet>
       <TopSection gap="md">
         <DataCard>
           <CardBGImage />
